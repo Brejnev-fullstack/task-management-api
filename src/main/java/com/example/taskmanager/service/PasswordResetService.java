@@ -56,7 +56,6 @@ public class PasswordResetService {
 
         tokenRepository.save(resetToken);
     }
-
     public void resetPassword(String token, String newPassword) {
 
         PasswordResetToken resetToken = tokenRepository.findByToken(token)
